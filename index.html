@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MovieFinder</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo container">
+				<a href="index.html">Movie<span>Finder</span> </a>
+			</div>
+		</header>
+		<div class="search-box container">
+			<h1>Search For Any Movie</h1>
+			<form id="searchForm">
+				<input
+					type="text"
+					id="searchBar"
+					placeholder="Search Movie..."
+				/>
+			</form>
+		</div>
+
+		<div id="movies" class="row container"></div>
+		<script src="./jquery-3.6.0.min.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>
