@@ -9,7 +9,7 @@ $(document).ready(
 function getMovies(search) {
 	$.ajax({
 		method: "GET",
-		url: "http://www.omdbapi.com/?apikey=422f59fb&s=" + search,
+		url: "https://www.omdbapi.com/?apikey=422f59fb&s=" + search,
 		dataType: "json",
 	}).done((data) => {
 		console.log(data.Search);
@@ -49,7 +49,7 @@ function movieSelected(movieID) {
 function getMovie() {
 	let id = sessionStorage.getItem("movieID");
 	let xhr = new XMLHttpRequest();
-	xhr.open("GET", `http://www.omdbapi.com/?apikey=422f59fb&i=${id}`, true);
+	xhr.open("GET", `https://www.omdbapi.com/?apikey=422f59fb&i=${id}`, true);
 	xhr.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			let movie = JSON.parse(this.responseText);
@@ -115,7 +115,7 @@ function getMovie() {
 	let id = sessionStorage.getItem("movieID");
 	$.ajax({
 		method: "GET",
-		url: "http://www.omdbapi.com/?apikey=422f59fb&i=" + id,
+		url: "https://www.omdbapi.com/?apikey=422f59fb&i=" + id,
 		dataType: "json",
 	}).done((data) => {
 		console.log(data);
